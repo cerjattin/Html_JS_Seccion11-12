@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número Par o Impar</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function verificarParidad() {
+            // Obtiene el valor ingresado por el usuario
+            const numero = parseInt(document.getElementById("numero").value);
+
+            // Verifica si es un número válido
+            if (isNaN(numero)) {
+                document.getElementById("resultado").innerHTML = "Por favor, ingresa un número válido.";
+                return;
+            }
+
+            // Verifica si el número es par o impar y muestra el resultado
+            if (numero % 2 === 0) {
+                document.getElementById("resultado").innerHTML = "El número es par.";
+            } else {
+                document.getElementById("resultado").innerHTML = "El número es impar.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Verificador de Paridad</h1>
+        <div class="form-group">
+            <label for="numero">Ingresa un número:</label>
+            <input type="number" id="numero" class="form-control" placeholder="Ejemplo: 7">
+        </div>
+        <button onclick="verificarParidad()" class="btn btn-primary">Verificar</button>
+        <p id="resultado" class="mt-3"></p>
+    </div>
+
+    <!-- Enlace a Bootstrap JS y dependencias de jQuery y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
