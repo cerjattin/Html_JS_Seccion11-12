@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Structure</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top blue bar */
+        .top-bar {
+            background-color: #4974e1;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        /* Main header with logos and nav links */
+        .main-header {
+            background-color: #002a63;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .main-header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-header .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .main-header .nav-links a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-header .nav-links a:hover {
+            color: #00a8e1;
+            text-decoration: none;
+        }
+
+        /* Active link styling */
+        .active-link {
+            color: #00a8e1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top blue bar with GOV.CO logo -->
+    <div class="top-bar">
+        <img src="/scr/img/header_govco.png" alt="GOV.CO Logo"> <!-- Replace with actual path -->
+    </div>
+
+    <div class="main-header">
+        <div class="logo">
+            <img src="/scr/img/channels-748_logo_mintic_light.svg" alt="TIC Logo"> 
+            <img src="/scr/img/channels-748_logo_talentotech.png" alt="Talento TECH Logo" style="margin-left: 20px;"> 
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active-link">Inicio</a>
+            <a href="#">¿Qué es Talento TECH?</a>
+            <a href="#">¡Inscríbete!</a>
+            <a href="#">Historias</a>
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Bootcamps en región</a>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript for any dynamic interactions -->
+    <script>
+        // JavaScript to add 'active' link functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".nav-links a");
+            links.forEach(link => {
+                link.addEventListener("click", function() {
+                    links.forEach(l => l.classList.remove("active-link"));
+                    this.classList.add("active-link");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

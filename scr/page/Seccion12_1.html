@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Arreglo Aleatorio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TalentoTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/scr/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seccion 11
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/scr/page/Seccion11_1.html">Ejercicio 1</a></li>
+                            <li><a class="dropdown-item" href="/scr/page/Seccion11_2.html">Ejercicio 2</a></li>
+                            <li><a class="dropdown-item" href="/scr/page/Seccion11_3.html">Ejercicio 3</a></li>
+                            <li><a class="dropdown-item" href="/scr/page/Seccion11_4.html">Ejercicio 4</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Más ...</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seccion 12
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/scr/page/Seccion12_1.html">Ejercicio 1</a></li>
+                            <li><a class="dropdown-item" href="/scr/page/Seccion12_2.html">Ejercicio 2</a></li>
+                            <li><a class="dropdown-item" href="/scr/page/Seccion12_3.html">Ejercicio 3</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Más ...</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Suma de Números Aleatorios en un Arreglo</h2>
+    <div class="card">
+        <div class="card-body">
+            <button id="generateBtn" class="btn btn-primary mb-3">Generar Arreglo y Calcular Suma</button>
+            <div id="arrayOutput" class="mb-3"></div>
+            <div id="sumOutput" class="font-weight-bold"></div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    function generarArregloAleatorio(tamano) {
+        let arreglo = [];
+        for (let i = 0; i < tamano; i++) {
+            arreglo.push(Math.floor(Math.random() * 100) + 1); // Números aleatorios entre 1 y 100
+        }
+        return arreglo;
+    }
+
+    function calcularSuma(arreglo) {
+        return arreglo.reduce((a, b) => a + b, 0);
+    }
+
+    document.getElementById('generateBtn').addEventListener('click', () => {
+        const arreglo = generarArregloAleatorio(10); // Arreglo de 10 elementos
+        const suma = calcularSuma(arreglo);
+
+        // Mostrar el arreglo y la suma en la página
+        document.getElementById('arrayOutput').innerText = 'Arreglo generado: [' + arreglo.join(', ') + ']';
+        document.getElementById('sumOutput').innerText = 'Suma total: ' + suma;
+    });
+</script>
+
+<!-- Bootstrap JS y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

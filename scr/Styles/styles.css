@@ -1,0 +1,48 @@
+
+body {
+    background-color: #001f3f;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top blue bar */
+.top-bar {
+    background-color: #4974e1;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+.top-bar img {
+    padding: 10px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Main header with logos and nav links */
+.main-header {
+    align-content: center;
+    background-color: #002a63;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-custom {
+    background-color: #002a63; /* Cambia este valor por el tono de azul que prefieras */
+    color: white; /* Cambia el color del texto a blanco para que sea legible */
+}
+
+.navbar-custom .nav-link {
+    color: white; /* Cambia el color de los enlaces a blanco */
+}
+
+.navbar-custom .nav-link:hover {
+    color: #e0e0e0; /* Color de los enlaces al pasar el ratón */
+}
+.navbar .me-auto{
+    margin-right: auto;
+    
+}

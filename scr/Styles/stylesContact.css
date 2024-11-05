@@ -1,0 +1,71 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+/* Add your own CSS rules here */
+
+ul{
+display: flex;
+gap: 20px;
+}
+li{
+    list-style: none;
+    --color:#ff0050;
+}
+
+a-sm{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: #18191f;
+    border-radius: 5px;
+    box-shadow: 
+    -2px -2px 3px #ffffff0d,
+    3px 3px 3px #00000033;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    transition: all .2s ease-in-out;
+}
+
+.fa-brands {
+    font-size: 20px;
+    color: #555;
+}
+
+a:hover .fa-brands {
+    color: var(--color);
+    text-shadow: 0 0 30px var(--color);
+}
+
+li :nth-child(2) {
+--color : #1c7dd5;
+}
+li :nth-child(3) {
+    --color : #d43256;
+}
+lim :nth-child(4) {
+    --color : #4cd137;
+}
+        
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.contenido {
+    display: flex;
+    justify-content: space-between;
+}
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.tabla th, .tabla td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+.estrella {
+    color: gold; /* Color de la estrella */
+    font-size: 1.2em; /* Tamaño de la estrella */
+}
